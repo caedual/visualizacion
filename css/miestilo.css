@@ -1,0 +1,58 @@
+section{
+	background-color: #031C43;
+	padding: 11px;
+	
+}
+
+header,footer{
+	background-color: RGBA(8,42,96,0.9);
+	padding: 1px; 	
+}
+
+#oculto{
+	display: none;
+}
+
+canvas{
+	border:2px dashed #3B619C;
+	padding:15px;
+}
+
+label{
+	color: #3B619C;
+}
+
+.redes{
+	padding-top: 80px;
+}
+
+.titulo{
+	color:red;
+}
+
+.ayuda{
+	color: #3B619C;
+}
+
+#botones-social{
+	position: absolute;
+	padding-left: 1090px;	
+	padding-top: 10px;
+}
+
+#download {
+    float:right;
+    cursor:pointer;
+    color:white;
+    padding:15px;
+}
+
+#download:hover {
+    color:#51A35F;
+	text-decoration: none;
+}
+
+#yo{
+	color: #DFD619;
+	margin: 10px;
+}

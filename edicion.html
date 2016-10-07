@@ -1,0 +1,24 @@
+<div class="col-md-6">
+	<h2 class="titulo">Original</h3>
+	<canvas id="canvasoriginal" class="imagenes" width="500" height="320">
+			<p>Su navegador no soporta html5</p>
+	</canvas>
+	<h4 class="ayuda">1° PASO - Elija una imagen</h4>
+	<input class="cargador" type="file" id="uploadimage" accept="image/*" onchange="cargaimagen();">
+</div>
+<div class="col-md-6">
+	<h2 class="titulo">Filtro</h3>
+	<canvas id="canvasresultado" class="imagenes" width="500" height="320">
+			<p>Su navegador no soporta html5</p>
+	</canvas>
+	<h4 class="ayuda">2° PASO - Elija el filtro deseado</h4>
+	<button type="button" class="btn btn-success" onclick="rojizo();">Rojizo</button>
+	<button type="button" class="btn btn-success" onclick="negativo();">Negativo</button>
+	<button type="button" class="btn btn-success" onclick="sepia();">Sepia</button>
+	<button type="button" class="btn btn-success" onclick="grises();">Grises</button>
+	<div id="oculto" role="alert" class="alert alert-info" >
+	  <span>
+	    <p>Genial! ya podes guardar tus filtros...</p>
+	  </span>
+	</div>
+</div>
