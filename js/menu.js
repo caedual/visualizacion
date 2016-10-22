@@ -3,7 +3,7 @@
 $('document').ready(function(){
 	// Definicion de Variables con los Nombres de las Secciones
 	inicio = 'inicio';
-	edicion = 'edicion';
+	edicionn = 'edicionn';
 	contacto = 'contacto';
 	/* Funcion que Carga en el Contenedor Principal la 
 		Seccion que se le pase como Parametro */
@@ -33,11 +33,11 @@ $('document').ready(function(){
 	});
 
 	// Carga la Seccion Actividades al Presionar Actividades en el NAV
-	$('#edicion').on('click', function(event){
+	$('#edicionn').on('click', function(event){
 		event.preventDefault();
 		$(".nav").find(".active").removeClass("active");
 		$(this).addClass("active");
-		cargarSeccion(edicion);
+		cargarSeccion(edicionn);
 	});
 
 

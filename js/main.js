@@ -4,13 +4,18 @@ var canvasoriginal;
 var contextoriginal;
 var contextresultado;
 var canvasresultado;
+var dataurl; //variable donde guardaremos el contenido
 var canvashistograma;
 var contexthistograma;
 var imageObj = new Image(); //crea un nuevo objeto de iamgen 
 
+window.onload = function(){
+    document.getElementById('download').disabled = true;
+}
 
 function cargaimagen ()
 {
+  document.getElementById('download').disabled = true;
   canvasoriginal = document.getElementById("canvasoriginal"); //obtenemos el canvas del DOM 
   context = canvasoriginal.getContext("2d"); //accedemos al contexto del canvas anteriormente obtenido
   canvasresultado = document.getElementById("canvasresultado");
@@ -30,15 +35,12 @@ function cargaimagen ()
   }
 }
 
-function downloadCanvas(link, canvasId, filename) {
-    link.href = document.getElementById(canvasId).toDataURL();
-    link.download = filename;
+
+function guardar(){
+  dataurl = canvasresultado.toDataURL("image/jpeg",1.0); //guardamos el canvas con los parametros son el formato que deseamos guardar y la calidad de 0.0 a 1.0
+  dataurl = dataurl.replace("image/jpeg",'image/octet-stream'); //para descargar, sustituimos el formato por octet
+  document.location.href = dataurl; //para forzar al navegador  a descargarlo.
 }
-
-document.getElementById('download').addEventListener('click', function() {
-    downloadCanvas(this, 'canvasresultado', 'filtro.png');
-}, false);
-
 
 function cambiaimagen(url){
   imageObj.src=url;
@@ -58,6 +60,7 @@ function negativo(){
     }
   }
   context2.putImageData(imageDataResultado, 0, 0);//visualiza la imagen nuevamente
+  document.getElementById('download').disabled = false;
   mensajito();
 }
 
@@ -71,6 +74,7 @@ function rojizo(){
        }
   }
   context2.putImageData(imageDataResultado, 0, 0);//visualiza la imagen nuevamente
+  document.getElementById('download').disabled = false;
   mensajito();
 }
 
@@ -88,6 +92,7 @@ function grises(){
     }
   }
   context2.putImageData(imageDataResultado,0,0);
+  document.getElementById('download').disabled = false;
   mensajito();
 }
 
@@ -105,6 +110,7 @@ function sepia(){
     }
   }
   context2.putImageData(imageDataResultado,0,0);
+  document.getElementById('download').disabled = false;
   mensajito();
 }
 

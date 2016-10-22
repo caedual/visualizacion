@@ -36,7 +36,7 @@ label{
 
 #botones-social{
 	position: absolute;
-	padding-left: 1090px;	
+	padding-left: 1050px;	
 	padding-top: 10px;
 }
 
@@ -48,11 +48,11 @@ label{
 }
 
 #download:hover {
-    color:#51A35F;
+    color:white;
 	text-decoration: none;
 }
 
 #yo{
-	color: #DFD619;
+	color: white;
 	margin: 10px;
 }
